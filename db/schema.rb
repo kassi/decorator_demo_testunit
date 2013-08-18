@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130818112810) do
+ActiveRecord::Schema.define(:version => 20130818113813) do
 
   create_table "blog_comments", :force => true do |t|
     t.string   "name",       :null => false
@@ -22,9 +22,11 @@ ActiveRecord::Schema.define(:version => 20130818112810) do
     t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   add_index "blog_comments", ["post_id"], :name => "index_blog_comments_on_post_id"
+  add_index "blog_comments", ["user_id"], :name => "index_blog_comments_on_user_id"
 
   create_table "blog_posts", :force => true do |t|
     t.string   "title",                         :null => false
