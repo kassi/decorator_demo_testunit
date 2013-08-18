@@ -1,0 +1,16 @@
+<%= form_for [post, comment], remote: true,
+  html: {
+    class: "new_blog_comment", id: "new_blog_comment" } do |f| -%>
+
+  <p><%=t :leave_a_comment, scope: 'blogit.comments'%></p>
+
+  <%= field do %>
+    <%= f.label :body, t(:your_comment, scope: 'blogit.comments') %><br>
+    <%= f.text_area :body %><br>
+    <%= errors_on(comment, :body) %>
+  <% end %>
+
+  <%= actions do %>
+    <%= f.submit t(:add_comment, scope: 'blogit.comments'), :disable_with => t(:adding_comment, scope: 'blogit.comments') %>
+  <% end %>
+<% end -%>
