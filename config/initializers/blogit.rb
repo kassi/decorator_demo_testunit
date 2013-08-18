@@ -2,7 +2,7 @@
 Blogit.configure do |config|
 
   # What kind of comments do you want to add to your blog ? (:active_record, :disqus or :no)
-  # config.include_comments = :active_record
+  config.include_comments = :active_record
 
   # When using disqus comments, what is the shortname of your forum ?
   # config.disqus_shortname = ""
@@ -16,10 +16,10 @@ Blogit.configure do |config|
   # The name of the controller method we'll call to return the current blogger.
   # Change this if you use something other than current_user.
   # Eg. current_admin_user (if using ActiveAdmin)
-  # config.current_blogger_method = :current_user
+  config.current_blogger_method = :current_user
 
   # What method do we call on blogger to show who they are?
-  # config.blogger_display_name_method = :username
+  config.blogger_display_name_method = :name
 
   # Which DateTime::FORMATS format do we use to display blog and comment publish time
   # config.datetime_format = :short
@@ -31,7 +31,7 @@ Blogit.configure do |config|
   # config.posts_per_page = 5
 
   # The name of the before filter we'll call to authenticate the current user.
-  # config.authentication_method = :login_required
+  config.authentication_method = :authenticate!
 
   # If set to true, the comments form will POST and DELETE to the comments
   # controller using AJAX calls.
@@ -62,13 +62,13 @@ Blogit.configure do |config|
 
   # Should blogit ping search engines with your sitemap
   # when posts are created, updated or destroyed?
-  # 
+  #
   # Can pass true to ping all supported search engines, or an array of search
   # engine names. e.g. [:google, :bing]
-  # 
+  #
   # Defaults to false
   # config.ping_search_engines = false
-  
+
   # When using redcarpet as content parser, pass these options as defaults.
   # @see here for more options: https://github.com/tanoku/redcarpet
   # config.redcarpet_options = {
