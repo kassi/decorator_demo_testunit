@@ -89,5 +89,5 @@ Blogit.configure do |config|
 
 end
 
-# Requires extension ruby files in lib/extensions.
+# Requires extension ruby files in lib/blogit.
 Dir[Rails.root.join("lib/blogit/*.rb")].each {|f| require f}
