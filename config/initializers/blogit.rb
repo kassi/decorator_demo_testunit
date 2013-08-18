@@ -88,3 +88,6 @@ Blogit.configure do |config|
   # config.inline_main_app_named_routes = true
 
 end
+
+# Requires extension ruby files in lib/extensions.
+Dir[Rails.root.join("lib/blogit/*.rb")].each {|f| require f}
