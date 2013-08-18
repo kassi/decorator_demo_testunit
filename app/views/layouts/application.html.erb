@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DecoratorDemoTestunit</title>
+  <title>Decorator Demo TestUnit</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Sign up", new_user_registration_path %></li>
+      <li><%= link_to "Sign in", new_user_session_path %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path %></li>
+      <li><%= link_to "Blog", blogit_path %></li>
+    </ul>
+  </nav>
   <div class="flash">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
