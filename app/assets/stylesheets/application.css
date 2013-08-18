@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
  */
+.blogit_error_message {
+  color: red;
+}
