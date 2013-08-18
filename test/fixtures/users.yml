@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
+  name: First User
+  email: one@example.com
 
 two:
-  name: MyString
+  name: Second User
+  email: two@example.com
